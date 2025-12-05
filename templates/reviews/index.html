@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello world</p>
-</body>
-</html>
+<table class="table table-striped table-bordered">
+    <thead class="tread-dark">
+        <tr>
+            <th>Автор</th>
+            <th>Текст</th>
+            <th>Дата написання</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for review in reviews%}
+        <tr>
+            <td>{{review.username}}</td>
+            <td>{{review.text}}</td>
+            <td>{{review.date}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+
+</table>
