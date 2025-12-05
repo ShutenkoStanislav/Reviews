@@ -6,9 +6,10 @@ class Review(models.Model):
     date = models.DateTimeField()
 
     def __str__(self):
-        return f"{self.username} - {self.date}"
+        return f"{self.username} - {self.text}"
+    
     class Meta:
         verbose_name = "Відгук"
         verbose_name_plural = "Відгуки"
-        ordering = "-date"
+        ordering = ["date"]
 
